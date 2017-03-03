@@ -1,9 +1,11 @@
 const Hapi = require('hapi');
 const inert = require('inert');
 const path = require('path');
+const hapiAuthJWT = require('hapi-auth-jwt2');
 
 const server = new Hapi.Server();
 const routes = require('./server/routes');
+const { validateFunc } = require('./server/utils');
 
 server.connection({
   host: 'localhost',
@@ -15,7 +17,11 @@ server.connection({
   }
 });
 
-server.register(inert, err => {
+server.register([{
+  register: inert
+}, {
+  register: hapiAuthJWT
+}], err => {
   if (err) {
     throw err;
   }
@@ -23,6 +29,13 @@ server.register(inert, err => {
   for (let route of routes) {
     server.route(route);
   }
+
+  server.auth.strategy('jwt', 'jwt', {
+    key: 'secretKey',
+    validateFunc: validateFunc
+  });
+
+  server.auth.default('jwt');
 
   server.start((err) => {
     if (err) {

@@ -22,6 +22,7 @@
     "@angular/router": "^3.4.0",
     "core-js": "^2.4.1",
     "hapi": "^16.1.0",
+    "hapi-auth-jwt2": "^7.2.4",
     "inert": "^4.1.0",
     "rxjs": "^5.1.0",
     "zone.js": "^0.7.6"
