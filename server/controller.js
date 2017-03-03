@@ -1,4 +1,5 @@
 const path = require('path');
+const mock = require('./response');
 
 const index = {
   auth: false,
@@ -11,6 +12,28 @@ const index = {
   }
 };
 
+const heroes = {
+  findAll: {
+    auth: false,
+    handler: (request, reply) => {
+      return reply({
+        data: mock
+      });
+    }
+  },
+
+  findOne: {
+    auth: false,
+    handler: (request, reply) => {
+      const id = request.params.id;
+      return reply({
+        data: mock.filter(hero => hero.id == id)
+      });
+    }
+  }
+}
+
 module.exports = {
-  index
+  index,
+  heroes
 }
