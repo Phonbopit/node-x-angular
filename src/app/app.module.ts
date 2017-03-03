@@ -11,13 +11,17 @@ import { HeroListComponent } from './hero-list/hero-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 
+import { HeroService } from './hero.service';
+import { NavbarComponent } from './navbar/navbar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     HeroComponent,
     HeroListComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,7 @@ import { HomeComponent } from './home/home.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

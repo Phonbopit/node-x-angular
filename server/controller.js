@@ -27,7 +27,7 @@ const heroes = {
     handler: (request, reply) => {
       const id = request.params.id;
       return reply({
-        data: mock.filter(hero => hero.id == id)
+        data: mock.filter(hero => hero.id == id)[0]
       });
     }
   }

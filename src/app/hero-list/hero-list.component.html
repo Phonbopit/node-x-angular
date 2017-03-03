@@ -1,3 +1,23 @@
-<p>
-  hero-list works!
-</p>
+<div class="columns is-multiline ">
+  <div class="column is-one-quarter" *ngFor="let hero of heroes">
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img src="https://api.opendota.com{{hero.img}}" alt="Icon">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p class="title is-4"><a routerLink="/heroes/{{hero.id}}" class="is-success">{{hero.localized_name}}</a></p>
+            <p class="subtitle is-6">{{hero.name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

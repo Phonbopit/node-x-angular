@@ -11,6 +11,7 @@ server.connection({
   host: 'localhost',
   port: 5000,
   routes: {
+    cors: true,
     files: {
       relativeTo: path.join(__dirname, 'dist')
     }
