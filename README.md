@@ -1,5 +1,28 @@
 # HapiXAngular
 
+This project was seperate 2 section for backend and frontend.
+
+- [Backend](/server) : Hapi.js
+- [Frontend](/src) : Angular (generated with Angular CLI)
+
+### Usage
+
+```
+npm install
+ng build
+npm start
+```
+
+Open [http://localhost:5000/](http://localhost:5000/) and have fun :)
+
+### Hapi.js (Backend)
+
+- `main.js` : main file for run a server.
+- `/server`folder that contains all backend files.
+
+
+### Angular (Frontend)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.32.3.
 
 ## Development server
