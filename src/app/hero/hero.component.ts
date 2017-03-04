@@ -11,19 +11,18 @@ export class HeroComponent implements OnInit {
 
   hero: any;
 
-  title: string = 'zzzz';
-
-  constructor(private heroService: HeroService) { }
+  constructor(private route: ActivatedRoute, private heroService: HeroService) { }
 
   ngOnInit() {
-    // const id = this.route.params['id'];
-    console.log('id ', 2);
-    this.heroService.findOne(2).subscribe(response => {
-      console.log('response', response);
-      this.hero = response.data;
 
-      console.log('this.hero', this.hero);
-    })
+    this.route.params.subscribe(params => {
+      const id = params['id'];
+      this.heroService.findOne(id).subscribe(response => {
+        this.hero = response.data;
+      });
+
+    });
+
   }
 
 }
