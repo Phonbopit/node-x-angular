@@ -4,6 +4,7 @@ This project was seperate 2 section for backend and frontend.
 
 - [Backend](/server) : Hapi.js
 - [Frontend](/src) : Angular (generated with Angular CLI)
+- [Slide](/example/slides)
 
 ### Usage
 
