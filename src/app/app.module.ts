@@ -14,6 +14,13 @@ import { HomeComponent } from './home/home.component';
 import { HeroService } from './hero.service';
 import { NavbarComponent } from './navbar/navbar.component';
 
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [{
+  path: '',
+  component: AboutComponent
+}];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,8 +35,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     FormsModule,
     HttpModule,
     AppRoutingModule
+    //RouterModule.forRoot(routes)
   ],
   providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

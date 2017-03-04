@@ -25,4 +25,8 @@ export class HeroComponent implements OnInit {
 
   }
 
+  like() {
+    console.log('like');
+  }
+
 }

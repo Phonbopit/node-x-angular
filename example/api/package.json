@@ -1,0 +1,17 @@
+{
+  "name": "node-x-angular-workshop",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "boom": "^4.2.0",
+    "hapi": "^16.1.0",
+    "hapi-auth-jwt2": "^7.2.4",
+    "inert": "^4.1.0",
+    "joi": "^10.2.2",
+    "jsonwebtoken": "^7.3.0",
+    "mongoose": "^4.8.5"
+  }
+}
