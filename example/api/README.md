@@ -12,7 +12,6 @@ npm install
 npm start
 ```
 
-
 ### API
 
 - `GET     /players`        : list all players

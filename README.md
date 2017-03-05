@@ -1,5 +1,9 @@
 # HapiXAngular
 
+Example of SPA with Hapi.js and Angular 2
+
+![Screenshot](/screen.png)
+
 This project was seperate 2 section for backend and frontend.
 
 - [Backend](/server) : Hapi.js
